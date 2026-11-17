@@ -1,0 +1,10 @@
+using Presentation.Interfaces;
+
+namespace Presentation.Console;
+
+public sealed class SystemConsoleIO : IConsoleIO
+{
+    public void Write(string value) => System.Console.Write(value);
+    public void WriteLine(string value = "") => System.Console.WriteLine(value);
+    public string ReadLine() => System.Console.ReadLine() ?? string.Empty;
+}
